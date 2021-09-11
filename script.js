@@ -47,19 +47,33 @@ $("#plus").click(function(){
           $("#input").val(a);
         }
         if(rndval>=10){
-         $(".maincontainer").css("background-color","rgba(202, 18, 18, 0.5)");
-         $("#bloodmoon").css("visibility","visible");
+  
+         $("#bloodmoon").css({"animation":"anim 1s infinite", "background-color": "rgb(51, 4, 2)"});
+         $("#bloodmoon").html("Blood Moon");
+$(".rd").css({"color":"red"});
+
         }
        
           });
    //reset button   
  $("#reset").click(function(){
-  $("#bloodmoon").css("visibility","hidden");
+  $("#bloodmoon").css({"visibility":"visible","animation":"anim1 1s infinite"});
+  $("#bloodmoon").html("Enegy Counter");
  rndval=1;
  a=3;
 $("#round").html(rndval);
 $("#input").val(a);
 $("#input").css("background-color","white");
-$(".maincontainer").css("background-color","rgba(20, 22, 22, 0.5)");
-             
+$(".maincontainer").css({"background-color":"#e0e0e0","box-shadow":"12px 12px 24px 0 rgba(0, 0, 0, 0.2),-12px -12px 24px 0 rgba(255, 255, 255, 1);"});
+$(".rd").css("color","rgb(23, 163, 18)");
+ 
+                      });
+
+
+                      $("#donate").click(function(){
+                        var text="480a28e5f9fd577e7252c3a02d8aafab0c367c40";
+                        var TempElement=$("<input>").val(text).appendTo('body').select();
+                        document.execCommand('copy');
+                        TempElement.remove();
+                        alert("Ronin wallet Copied");
                       });
