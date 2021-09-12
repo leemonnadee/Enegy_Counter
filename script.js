@@ -21,8 +21,8 @@ $("#plus").click(function(){
   a--
     $("input").val(a);
    
-    if(a<1){
-      a=1;
+    if(a<0){
+      a=0;
      
       $("input").val(a);
     }
